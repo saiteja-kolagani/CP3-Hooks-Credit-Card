@@ -23,7 +23,7 @@ const CreditCard = () => {
   }
 
   const onChangeName = event => {
-    setHolderName(event.target.value.toUpperCase())
+    setHolderName(event.target.value)
   }
 
   return (
@@ -33,7 +33,7 @@ const CreditCard = () => {
         <CardImageContainer data-testid="creditCard">
           <Number as="p">{cardNumber}</Number>
           <NamePara>CARDHOLDER NAME</NamePara>
-          <Name as="p">{holderName}</Name>
+          <Name as="p">{holderName.toUpperCase()}</Name>
         </CardImageContainer>
       </CardContainer>
       <PaymentMethodContainer>
